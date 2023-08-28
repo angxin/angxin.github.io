@@ -1,0 +1,288 @@
+/*Homepage*/
+
+*{
+	margin: 0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: "Segoe UI", Arial, sans-serif;
+	text-decoration: none;
+}
+
+body{
+	padding-top: 70px;
+}
+
+#navbar {
+	width:100%;
+	height:70px;
+	padding: 0 80% 0 5%;
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+	background: #7371FC;
+	color: #F5EFFF;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+}
+
+#navbarHead{
+	font-weight: bold;
+	min-width: 200px;
+	font-size: 2.5em;
+	color: #F5EFFF;
+}
+
+nav ul{
+	min-width: 500px;
+	height:70px;
+}
+
+nav ul li{
+	display:inline-block;
+	list_style:none;
+	height: 100%;
+	width:23%;
+	text-align: center;
+
+}
+
+nav ul li:hover{
+	background:#A594F9;
+}
+
+nav ul li a{
+	display:block;
+	text-decoration: none;
+	color: #F5EFFF;
+	font-size: 1.3em;
+	padding:23px 0 23px;
+}
+
+#intro{
+	height: 650px;
+	width: 100%;
+	background: #7371FC;
+	color: #F5EFFF;
+	text-align: center;
+}
+
+#intro #introduction{
+	display: flex;
+	justify-content: center;
+}
+
+#introduction img{
+	width:300px;
+	height:auto;
+	border-radius: 50%;
+}
+
+#introduction div{
+	margin: 100px 5% 100px 0;
+	font-size: 1.5em;
+	width: 400px;
+}
+
+#introduction div p{
+	margin: 100px 0 40px 0;
+	line-height: 1.5em;
+
+}
+
+#skills{
+	height: 600px;
+	background: white;
+	color: black;
+	text-align: center;
+	margin: 50px 0 0 0;
+	position: relative;
+	color: #7371FC;
+	display: flex;
+	justify-content: center;
+	
+}
+
+#skillTable{
+	margin:80px 0 0 0;
+	display: table-cell;
+	position:absolute;
+}
+
+#skillTitle1, #skillTitle2{	
+	text-align: center;
+	font-size: 35px;
+	color:black;
+	display: table-row;
+
+}
+
+#skillTitle1 h3, #skillTitle2 h3{
+	display: table-cell;
+}
+
+
+#skillList1, #skillList2{	
+	text-align: center;
+	display: table-row;
+}
+
+#skills .skillIcons{
+	text-decoration: none;
+	display: table-cell;
+	padding:0px 30px 50px;
+	font-size: 120px;
+	min-width: 90px;
+	height: auto;
+	color:black;
+}
+
+hr{
+	width:50%;
+	margin:auto;
+}
+
+#projects{
+	height: 500px;
+	background: white;
+	color: black;
+	text-align: center;
+	margin: 50px 0 0 0;
+	color: #7371FC;
+
+}
+
+.projectPreview{
+	background: black;
+	width: 400px;
+	height: auto;
+	margin:50px auto;
+	color: white;
+	position: relative;
+}
+
+.projectPreview img{
+	width:100%;
+	height:auto;
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.projectPreview:hover img{
+	opacity:0.5;
+	cursor: pointer;
+}
+
+.projectPreview:hover .projectText{
+	opacity:1;
+	cursor: pointer;
+}
+
+.projectText{
+	opacity: 0;
+	position: absolute;
+  	bottom: 50px;
+  	right: 30%;
+  	transition: opacity 1s;
+}
+
+.projectSubtitle{
+  	margin: 50px 0 30px 0;
+  	font-size: 25px;	
+}
+
+
+#footer{
+	height: 250px;
+	background: #7371FC;
+	color: #F5EFFF;
+	text-align:center;
+}
+ 
+#footer h1{
+	padding:20px;
+}
+
+#footer .contactIcons{
+	text-decoration: none;
+	padding:30px 30px 50px;
+	font-size: 50px;
+	color:black;
+}
+
+#footer .contactIcons:hover{
+	color: #A594F9;
+}
+ 
+
+/*About Me*/
+#timeline{
+	height: 700px;
+	background: white;
+	color: black;
+	text-align: center;
+	margin: 50px 0 0 0;
+}
+
+#timeline h1{
+	color: #7371FC;
+}
+
+#CV{
+	height: 700px;
+	background: white;
+	color: black;
+	text-align: center;
+	margin: 50px 0 0 0;
+}
+
+#CV h1{
+	color: #7371FC;
+}
+
+#CV object{
+	margin: 40px 0 0 0;
+	height: 550px;
+	width: 800px;
+	border-bottom:solid black 3px;
+}
+
+#introduction #descriptionaboutme p{
+	margin: 0px 0 20px 0;
+	line-height: 1.5em;
+}
+
+/*Projects*/
+#projectList{
+	height: 1000px;
+	background: white;
+	color: black;
+	text-align: center;
+	margin: 50px 0 0 0;
+}
+
+#projectList nav{
+	background: #7371FC;
+	color: #F5EFFF;
+	width:50%;
+	margin:auto;
+}
+
+#projectList nav ul li{
+	display:inline-block;
+	list_style:none;
+	height: 100%;
+	width:49.7%;
+	text-align: center;
+
+}
+
+#projectContainer{
+ 	margin: 2px 250px;
+  	display: block;
+}
+
+#projectContainer .projectPreview{
+	float:left;
+	margin: 30px 50px;
+}

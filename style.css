@@ -204,6 +204,7 @@ p.projectSubtitle{
 
 #footer{
 	height: 250px;
+	width:100%;
 	background: #7371FC;
 	color: #F5EFFF;
 	text-align:center;
@@ -295,10 +296,4 @@ p.projectSubtitle{
 #projectContainer .projectPreview{
 	float:left;
 	margin: 30px 50px;
-}
-
-iframe{
-	width: 100%;
-	height: 100%;
-
 }

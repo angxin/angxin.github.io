@@ -4,10 +4,6 @@
 	<title>Ang Xin's Portfolio</title>
 	<link href="style.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/c143af7231.js" crossorigin="anonymous"></script>
-	<script>
-	   var iframe = document.getElementsByTagName("iframe");
-	   iframe.height = iframe.contentWindow.document.body.scrollHeight;
-	</script>
 </head>
 <body>
 
@@ -23,7 +19,7 @@
 		</ul>
 	</nav>
 
-	<iframe src="./Test" frameborder="0" scrolling="no" width=100%></iframe>
+	<iframe src="./Test" frameborder="0" scrolling="no" width=100% height=1068px></iframe>
 
 	<div id="footer">
 		<h1>Contact Me</h1>
@@ -32,7 +28,10 @@
 		<a href="mailto: ax.gm01@gmail.com" target="_blank" rel="noopener noreferrer" class="fa fa-envelope contactIcons" aria-hidden="true"></a>
 		<p>Copyright © 2023 All rights reserved</p>
 	</div>
-
+	<script>
+	   document.getElementById("footer").bottom = 0;
+	   $('iframe').contents().height()
+	</script>
 
 </body>
 </html>

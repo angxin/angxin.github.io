@@ -4,6 +4,7 @@
 	<title>Ang Xin's Portfolio</title>
 	<link href="./style.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/c143af7231.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -69,12 +70,12 @@
 
 	<div id="projects">
 		<h1>Latest Project</h1>
-		<a href="./Project/MDIT">
+		<a href=".">
 			<div class="projectPreview">
-				<img src="./Media/MDIT/MDIT.PNG" alt="Picture of air quality dashboard">
+				<img src="." alt=".">
 				<div class="projectText">
-					<h4 class="projectSubtitle">Air Quality Monitoring Dashboard</h4>
-					<p class="projectSubtitle">PowerBI dashboard and report for MDIT datathon</p>
+					<h4 class="projectSubtitle">.</h4>
+					<p class="projectSubtitle">.</p>
 				</div>
 			</div>
 		</a>
@@ -88,6 +89,15 @@
 		<p>Copyright © 2023 All rights reserved</p>
 	</div>
 
+	<script>
+		async function test(){
+			var csv_file = "project_list.csv";
+			var response = await fetch(csv_file);
+			var tabledata = await response.text();
+			console.log(tabledata);
+		}
+		test();
+	</script>
 
 </body>
 </html>

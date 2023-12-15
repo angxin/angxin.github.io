@@ -30,13 +30,15 @@
 		<p>Copyright © 2023 All rights reserved</p>
 	</div>
 	<script>
-		var iframe_object = document.getElementsByTagName('iframe')[0];
-		console.log(iframe_object);
-		var height = iframe_object.contentWindow.document.body.scrollHeight;
-		console.log(iframe_object.contentWindow.document.body.scrollHeight);
-		console.log(height);
-		iframe_object.height = height;
-		console.log(iframe_object.height);
+		window.addEventListener('load', function(e) {
+			var iframe_object = document.getElementsByTagName('iframe')[0];
+			console.log(iframe_object);
+			var height = iframe_object.contentWindow.document.body.scrollHeight;
+			console.log(iframe_object.contentWindow.document.body.scrollHeight);
+			console.log(height);
+			iframe_object.height = height;
+			console.log(iframe_object.height);
+		});
 	</script>
 
 </body>

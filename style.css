@@ -265,7 +265,7 @@ p.projectSubtitle{
 
 /*Projects*/
 #projectList{
-	height: 1000px;
+	height: 30rem*10;
 	background: white;
 	color: black;
 	text-align: center;
@@ -289,11 +289,14 @@ p.projectSubtitle{
 }
 
 #projectContainer{
- 	margin: 2px 250px;
-  	display: block;
+ 	margin: 2px 100px;
+  	display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
 }
 
 #projectContainer .projectPreview{
-	float:left;
+
 	margin: 30px 50px;
 }

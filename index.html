@@ -90,21 +90,26 @@
 	</div>
 
 	<script>
+		extract_csv();
 		async function extract_csv(){
+
+			//extract data from csv
 			var csv_file = "./project_list.csv";
 			var response = await fetch(csv_file);
 			var tabledata = await response.text();
+
+			//get data for latest project
 			var data = tabledata.split("\n")
 			var latest = data[1].split(',');
-			console.log(tabledata);
+
+			//change latest project data to the one from the csv
 			document.getElementById("projectLink").href = "./Project/"+latest[0];
 			document.getElementById("projectPic").src = "./Media/"+latest[3];
 			document.getElementById("projectPic").alt = latest[1];
 			document.getElementById("projectTitle").innerHTML  = latest[1];
 			document.getElementById("projectCaption").innerHTML  = latest[2];
-			console.log(document.getElementById("projectCaption").innerHTML)
 		}
-		extract_csv();
+		
 	</script>
 
 </body>

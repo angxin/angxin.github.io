@@ -21,14 +21,12 @@
 
 	<div id="projects">
 		<h1>Latest Project</h1>
-		<a href="./Project/MDIT">
+		<a href="." id="projectLink">
 			<div class="projectPreview">
-				
-				<img src="./Media/MDIT/MDIT.PNG" alt="Picture of air quality dashboard">
-				
+				<img src="." alt="." id="projectPic">
 				<div class="projectText">
-					<h4 class="projectSubtitle">Air Quality Monitoring Dashboard</h4>
-					<p class="projectSubtitle">PowerBI dashboard and report for MDIT datathon</p>
+					<h4 class="projectSubtitle" id="projectTitle">.</h4>
+					<p class="projectSubtitle" id="projectCaption">.</p>
 				</div>
 			</div>
 		</a>
@@ -44,18 +42,19 @@
 			</ul>
 		</nav>
 		<div id="projectContainer">
-			<a href="./Project/MDIT">
+			<!--
+			<a href="." id="projectLink">
 			<div class="projectPreview">
-				
-				<img src="./Media/MDIT/MDIT.PNG" alt="Picture of air quality dashboard">
-				
+				<img src="." alt="." id="projectPic">
 				<div class="projectText">
-					<h4 class="projectSubtitle">Air Quality Monitoring Dashboard</h4>
-					<p class="projectSubtitle">PowerBI dashboard and report for MDIT datathon</p>
+					<h4 class="projectSubtitle" id="projectTitle">.</h4>
+					<p class="projectSubtitle" id="projectCaption">.</p>
 				</div>
 			</div>
-		</a>
-		</div>
+			</a>
+		-->
+
+
 
 	</div>
 
@@ -67,6 +66,44 @@
 		<p>Copyright © 2023 All rights reserved</p>
 	</div>
 
+	<script>
+		extract_csv();
+		async function extract_csv(){
 
+			//extract data from csv
+			var csv_file = "./project_list.csv";
+			var response = await fetch(csv_file);
+			var tabledata = await response.text();
+
+			//get data for latest project
+			var data = tabledata.split("\n")
+			var latest = data[1].split(',');
+
+			//change latest project data to the one from the csv
+			document.getElementById("projectLink").href = "./Project/"+latest[0];
+			document.getElementById("projectPic").src = "./Media/"+latest[3];
+			document.getElementById("projectPic").alt = latest[1];
+			document.getElementById("projectTitle").innerHTML  = latest[1];
+			document.getElementById("projectCaption").innerHTML  = latest[2];
+
+			for(i=1; i<data.length;i++){
+				var temp = data[i].split(',');
+				document.getElementById("projectContainer").innerHTML  += `<a href='${"./Project/"+temp[0]}' id='projectLink'>
+				<div class='projectPreview'>
+					<img src='${"./Media/"+temp[3]}' alt='${temp[1]}' id='projectPic'>
+					<div class='projectText'>
+						<h4 class='projectSubtitle' id='projectTitle'>${temp[1]}</h4>
+						<p class='projectSubtitle' id='projectCaption'>${temp[2]}</p>
+					</div>
+				</div>
+				</a>`
+				console.log(i)
+			}
+			
+		}
+
+
+		
+	</script>
 </body>
 </html>

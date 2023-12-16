@@ -160,6 +160,7 @@ hr{
 	margin:50px auto;
 	color: white;
 	position: relative;
+
 }
 
 .projectPreview img{
@@ -200,7 +201,12 @@ p.projectSubtitle{
   	font-size: 25px; 
 }
 
-
+a#projectLink{
+	display:block;
+	width:400px;
+	margin:50px auto;
+	
+}
 
 #footer{
 	height: 250px;
@@ -298,6 +304,5 @@ p.projectSubtitle{
 }
 
 #projectContainer .projectPreview{
-
 	margin: 30px 50px;
 }

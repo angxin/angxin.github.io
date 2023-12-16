@@ -70,12 +70,12 @@
 
 	<div id="projects">
 		<h1>Latest Project</h1>
-		<a href=".">
+		<a href="." id="projectLink">
 			<div class="projectPreview">
-				<img src="." alt=".">
+				<img src="." alt="." id="projectPic">
 				<div class="projectText">
-					<h4 class="projectSubtitle">.</h4>
-					<p class="projectSubtitle">.</p>
+					<h4 class="projectSubtitle" id="projectTitle">.</h4>
+					<p class="projectSubtitle" id="projectCaption">.</p>
 				</div>
 			</div>
 		</a>
@@ -90,16 +90,25 @@
 	</div>
 
 	<script>
-		async function test(){
-			var csv_file = "project_list.csv";
+		async function extract_csv(){
+			var csv_file = "./project_list.csv";
 			var response = await fetch(csv_file);
 			var tabledata = await response.text();
+			var data = tabledata.split("\n")
+			var latest = data[1].split(',');
 			console.log(tabledata);
+			document.getElementById("projectLink").href = "./Project/"+latest[0];
+			document.getElementById("projectPic").src = "./Media/"+latest[3];
+			document.getElementById("projectPic").alt = latest[1];
+			document.getElementById("projectTitle").innerHTML  = latest[1];
+			document.getElementById("projectCaption").innerHTML  = latest[2];
+			console.log(document.getElementById("projectCaption").innerHTML)
 		}
-		test();
+		extract_csv();
 	</script>
 
 </body>
 </html>
 
-<!--project tags cannot see on phone and thin screen-->
+<!--project tags cannot see on phone and thin screen
+can click longer than the pic-->

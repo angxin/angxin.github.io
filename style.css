@@ -267,9 +267,10 @@ p.projectSubtitle{
 #projectList{
 	height: 30rem*10;
 	background: white;
-	color: black;
+	color: #7371FC;
 	text-align: center;
 	margin: 50px 0 0 0;
+	
 }
 
 #projectList nav{

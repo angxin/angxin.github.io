@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polygenic Risk Score</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <base target="_blank">
+</head>
+
+<body class="stackedit" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <div class="stackedit__html"><h1 id="summer-research-project-2023" style="text-align:center;">Summer Research Project 2023</h1>
+<p>During the period of June to August 2023, I participated in the School of Mathematical Sciences’ Summer Research Project. My supervisor was my lecturer and mentor, <a href="https://www.nottingham.ac.uk/engineering/people/weangkee.ho">Dr Ho Weang Kee</a> who is a researcher with <strong>Cancer Research Malaysia</strong> specialising in statistical genetics for breast cancer. Our research project was <strong>Polygenic Risk Scores for Prediction of Breast Cancer Subtypes</strong>.</p>
+<p>The main goal of the project was to identify a method that would allow a universal Polygenic Risk Scores (PRS) to be used for people of different ethnicities and nationalities. The current PRS have varying performance on different ethnicities due to the differences in the genetic makeup which is what the PRS use to calculate the risk of developing breast cancer.</p>
+<h2 id="experience">Experience</h2>
+<p>For the first two weeks, I read research papers by <a href="https://www.nature.com/articles/s41467-020-17680-w">Dr Ho</a> and <a href="https://academic.oup.com/jnci/article/107/5/djv036/891009">Dr Nasim Mavaddat</a> about the PRS that have been created, how they work and what are the issues that have been documented. I also read about <strong>logistic regression</strong> and <strong>principal component analysis</strong> as these were relevant to the project.</p>
+<p>After that, I was given access to Cancer Research Malaysia’s data to perform my analysis. This included the gene alleles of the participants in the study as well as their ethnicity and whether they had breast cancer. I explored the dataset provided and to generate my own graph of the PRS by ethnicity.</p>
+<figure>
+<img src="../Media/PRS/PRS_Normal.png"  width=70% style="display: block; margin: 0 auto;">
+<figcaption style="text-align:center;">Distribution of PRS by ethnicity
+</figure>
+<p>To determine the  heterogeneity of the PRS between ethnicities, I used R to calculate the <a href="https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/heterogeneity.html#i-squared">Thompson’s <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">I^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.07847em;">I</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span> Statistic</a> and plotted forest plots to visualise the differences.</p>
+<figure>
+<img src="../Media/PRS/PRS_Forest.png"  width=70% style="display: block; margin: 0 auto;">
+<figcaption style="text-align:center;">Forest plot of mean of PRS for each ethnicity
+</figure>
+<p>For the remaining time, Dr Ho and I would have weekly check-ins where I would present my progress to Dr Ho and she would give feedback on my analysis as well as decide what direction we should look into. I would spend the week performing the analysis and recalculating the PRS after the algorithm was applied. We tried various methods to reduce the <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">I^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.07847em;">I</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span> Statistic but most of them were unsuccessful in producing the desired results except for the addition of principal components in the PRS calculation.</p>
+<p>At the end of the 3 months, I wrote a report detailing the backgroud of the problem, methods we tested and the results.</p>
+<figure>
+<object data="../Media/PRS/PRS.pdf" type="application/pdf"  height=550px width=100%>
+<p>Unable to display PDF file. <a href="/Media/PRS/PRS.pdf">Download</a> instead.</p>
+</object>
+<figcaption style="text-align:center;">PDF of the report on Polygenic Risk Scores</figcaption>
+</figure>
+<h2 id="thoughts">Thoughts</h2>
+<p>Since all the work was done remotely, I had time to both enjoy my summer as well as continue my learning journey. I appreciate Dr Ho for giving me this opportunity and  guidance to improve my statistical and programming knowledge.  My R programming skills greatly improved over the course of the project as well as my communication skills as I learned to convey my results through clear visuals and presentation. I will continue to use these valuable skills in my future career.</p>
+</div>
+</body>
+
+</html>
